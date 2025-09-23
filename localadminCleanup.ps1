@@ -5,7 +5,6 @@ $List = Get-LocalGroupMember -Group Administrators | Where-Object {
     $_.name -notlike "*myit*" -and 
     $_.name -notlike "*\Administrator" -and 
 	$_.name -notlike "*oldIT*" -and
-	$_.name -notlike "*-adm" -and
     $_.ObjectClass -eq "User"
 }
 
@@ -56,4 +55,5 @@ Get-LocalUser | Select-Object Name, Enabled, Description | Format-Table -AutoSiz
 
 
 Write-Output "`n+-----------+`n[ Complete! ]`n+-----------+`n"
+
 exit 0

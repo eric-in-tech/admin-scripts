@@ -2,8 +2,6 @@
 $List = Get-LocalGroupMember -Group Administrators | Where-Object {
     $_.name -notlike "*myit*" -and 
     $_.name -notlike "*\Administrator" -and 
-    $_.name -notlike "*oldIT*" -and
-    $_.name -notlike "*-adm" -and
     $_.ObjectClass -eq "User"
 }
 
@@ -25,4 +23,5 @@ if ($List.Count -gt 0 -or $myITAccounts.Count -gt 1) {
     Write-Output "This house is clean"
     exit 0
 }
+
 

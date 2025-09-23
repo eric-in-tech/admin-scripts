@@ -1,7 +1,7 @@
 #update BookInPolicy for a room/resource calendar
 
 $room = "RoomMailboxName"
-$newUser = "newuser@follettcontent.com"
+$newUser = "newuser@company.lan"
 
 # Get the current booking policy, then convert each entry from LegacyExchangeDN to SMTP
 $currentPolicy = (Get-CalendarProcessing -Identity $room).BookInPolicy
@@ -18,3 +18,4 @@ write-output $smtpaddresses
 
 # Add the new user to the array
 Set-CalendarProcessing -Identity $room -BookInPolicy ($currentPolicy + $newUser)
+

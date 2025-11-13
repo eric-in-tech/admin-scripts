@@ -1,3 +1,6 @@
+# original from NinjaOne script share forum
+# produces a basic listing of important physical details on a PC's RAM components
+
 function Translate-FormFactor {
     param(
         [int]$FormFactor
@@ -44,5 +47,6 @@ DDR Type: $DDRType
 Manufacturer: $Manufacturer
 Slot Capacity: $($Capacity -join " / ")
 "@
+
 
 Write-Output $RAMDetails

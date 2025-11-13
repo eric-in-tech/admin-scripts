@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# new Linux workstation configuration tasks
+# relies on other .sh scripts for each menu item
+
 # menu item names
 script1="Set hostname"
 script2="NinjaOne agent install"

@@ -1,3 +1,5 @@
+## notes, not intended to run fully as a script
+
 # The way you kill something like that so you can restart it (in this case it restarted it automatically) is to do the following in an elevated powershell.
 
 Get-WmiObject -class win32_service |  ? {$_.state -eq 'stop pending'}
@@ -16,3 +18,4 @@ Get-WmiObject -class win32_service |  ? {$_.state -eq 'stop pending'}
 #
 
 Stop-Process 11020 -force -PassThru -ErrorAction stop
+

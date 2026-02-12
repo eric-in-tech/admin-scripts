@@ -1,3 +1,4 @@
+## simple powershell network drive mapping
 ## used as an Intune remediation script to map a specific UNC path to a specific drive letter and display a friendly label in Explorer 
 
 $DriveLetter = "A"
@@ -9,3 +10,4 @@ $null = New-PSDrive -PSProvider FileSystem -Name $DriveLetter -Root $Path -Descr
 (New-Object -ComObject Shell.Application).NameSpace("$($DriveLetter):").Self.Name = $Label
 
 Get-PSDrive -name $DriveLetter
+
